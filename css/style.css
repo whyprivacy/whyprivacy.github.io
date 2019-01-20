@@ -1,0 +1,113 @@
+ul, dl, li a, dd a, blockquote, blockquote a {
+  color: #bebebe;
+  font-family: Verdana, sans-serif;
+}
+body {
+  background-color: #242424;
+  margin: 0;
+}
+header {
+  margin-bottom: 60px;
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+header p {
+  text-align: center;
+  font-style: italic;
+}
+#myReasons {
+  border-bottom: 1px solid #242424;
+  display: none;
+}
+blockquote {
+  font-size: 1em;
+  margin-bottom: 4em;
+}
+nav li {
+  display: inline-block;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 100%;
+  background-color: #303030;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1vw;
+}
+h1, h2, h3, h4, h5, h6, header {
+  font-family: Georgia, serif;
+  color: #dcdcdc;
+}
+
+
+section {
+  margin-top: 35px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #242424;
+}
+ul {
+  list-style-type: none;
+}
+dt, dt a {
+  font-weight: bold;
+  color: #467ba7;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+}
+dl {
+  margin-left: 60px;
+}
+dd {
+  font-size: 0.9em;
+  text-decoration: none;
+}
+li a {
+  font-weight: bold;
+  color: #467ba7;
+  text-decoration: none;
+}
+li {
+  margin-bottom: 1em;
+  margin-left: 20px;
+}
+footer {
+  color: #666666;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+em {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 100em) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 64em) {
+  .container {
+    min-width: 35em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    min-width: 80%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  h2, dt {
+    text-align: center;
+  }
+  dl, li, dd {
+    margin-left: 0;
+  }
+}
