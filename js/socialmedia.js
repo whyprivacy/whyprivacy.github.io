@@ -148,6 +148,7 @@ $(document).ready(function() {
       cell.innerHTML = '<img src="' + site.domain + site.redirect + '" height="' + imgSize + '"><p>' + site.name + '</p>';
 
       if (j < numCols - 1 && i < platforms.length - 1) { i++; }
+      else { j++ }
     }
   }
 });
