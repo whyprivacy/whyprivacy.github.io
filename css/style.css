@@ -141,7 +141,8 @@ em {
   h2, dt {
     text-align: center;
   }
-  dl, li, dd {
+  dl, dd, ul, li {
     margin-left: 0;
+    padding-left: 0;
   }
 }
