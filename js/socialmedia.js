@@ -41,7 +41,7 @@ var platforms = [{
     }, {
         domain: "https://www.amazon.com",
         redirect: "/ap/signin/178-4417027-1316064?_encoding=UTF8&openid.assoc_handle=usflex&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=10000000&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Ffavicon.ico",
-        name: "Amazon.com"
+        name: "Amazon"
     }, {
         domain: "https://www.pinterest.com",
         redirect: "/login/?next=https%3A%2F%2Fwww.pinterest.com%2Ffavicon.ico",
@@ -61,7 +61,7 @@ var platforms = [{
     }, {
         domain: "https://www.academia.edu",
         redirect: "/login?cp=/favicon.ico&cs=www",
-        name: "Academia.edu"
+        name: "Academia"
     }, {
         domain: "https://accounts.google.com",
         redirect: "/ServiceLogin?service=blogger&hl=de&passive=1209600&continue=https://www.blogger.com/favicon.ico",

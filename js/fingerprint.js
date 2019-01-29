@@ -3,16 +3,16 @@ $(document).ready(function() {
   // Set browser fingerprint attributes
   var fingerprint = {
     browser: navigator.appName,
-    browserVendor: navigator.vendor,
-    browserCodeName: navigator.appCodeName,
-    browserProduct: navigator.product,
-    browserVersionPlatform: navigator.appVersion,
-    browserUserAgent: navigator.userAgent,
+    bVendor: navigator.vendor,
+    bCodeName: navigator.appCodeName,
+    bProduct: navigator.product,
+    bPlatform: navigator.appVersion,
+    bUserAgent: navigator.userAgent,
     canvasEnabled: isCanvasSupported(),
     colorDepth: screen.colorDepth,
     cookiesEnabled: navigator.cookieEnabled,
-    cookiesPersistent: hasLocalStorage(),
-    cookiesSession: hasSessionStorage(),
+    cookPersistent: hasLocalStorage(),
+    cookSession: hasSessionStorage(),
     cpu: [navigator.cpuClass, navigator.oscpu],
     timezone: getTimeZone(),
     dntEnabled: navigator.doNotTrack == 1,
@@ -21,15 +21,15 @@ $(document).ready(function() {
     language: navigator.language,
     plugins: getPlugins(),
     previousUrl: document.referrer,
-    screenResolution: screen.width + " x " + screen.height,
-    screenResolutionMax: screen.availWidth + " x " + screen.availHeight,
+    screenRes: screen.width + " x " + screen.height,
+    screenResMax: (screen.width != screen.availWidth)? screen.availWidth + " x " + screen.availHeight : '',
     javaEnabled: navigator.javaEnabled(),
     flashEnabled: isFlashEnabled(),
-    mimeTypes: navigator.mimeTypes,
+    mimeTypes: getMimeTypes(),
     lastVisit: lastVisit()
   };
   buildTable(document.getElementById('fingerprint'), fingerprint);
-
+console.log(navigator.mimeTypes);
 
 
   function hasLocalStorage() {
@@ -89,6 +89,16 @@ $(document).ready(function() {
   function getTimeZone() {
     var rightNow = new Date();
     return String(String(rightNow).split("(")[1]).split(")")[0];
+  }
+
+  function getMimeTypes() {
+    var mimeTypes = navigator.mimeTypes,
+        str = '';
+    for (var i = 0; i < mimeTypes.length; i++) {
+      str += mimeTypes[i].enabledPlugin.name;
+      str += (i < mimeTypes.length - 1)? ', ' : '';
+    }
+    return str;
   }
 
   // Display last cookie date in table, update cookie with new date

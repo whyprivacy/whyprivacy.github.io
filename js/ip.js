@@ -9,7 +9,7 @@ $(document).ready(function() {
       zip: data.postal,
       country: data.country,
       location: data.loc,
-      areaCode: data.phone
+      areaCode: (data.phone != null)? data.phone : ''
     };
 
     buildTable(document.getElementById('ip'), ipData);

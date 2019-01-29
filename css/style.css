@@ -6,6 +6,16 @@ body {
   background-color: #242424;
   margin: 0;
 }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 100%;
+  background-color: #303030;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1vw;
+}
 header {
   margin-bottom: 60px;
 }
@@ -30,16 +40,7 @@ blockquote {
 nav li {
   display: inline-block;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  height: 100%;
-  background-color: #303030;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-top: 1vw;
-}
+
 h1, h2, h4, h5, h6, header, th, td, p {
   font-family: Georgia, serif;
   color: #dcdcdc;
@@ -50,22 +51,33 @@ h1, h2, h4, h5, h6, header, th, td, p {
 #tracking h4 {
   text-align: center;
   margin-top: 3em;
+  margin-bottom: 0.2em;
+}
+#tracking p, #tracking a {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-size: 0.9em;
 }
 table {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 #fingerprint td, #ip td {
-  padding-right: 40px;
+  padding-right: 0.5em;
   padding-left: 0.5em;
 }
-#social td p, #social td img {
-  padding: 0.2em;
+#social td {
+  padding: 5px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+#social td p {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }
 section {
   margin-top: 35px;
@@ -75,7 +87,7 @@ section {
 ul {
   list-style-type: none;
 }
-dt, dt a, h3 {
+dt, a, h3 {
   font-weight: bold;
   color: #467ba7;
   margin-top: 1.2em;
