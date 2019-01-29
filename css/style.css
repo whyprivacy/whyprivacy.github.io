@@ -22,9 +22,10 @@ header p {
   border-bottom: 1px solid #242424;
   display: none;
 }
+
 blockquote {
   font-size: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 nav li {
   display: inline-block;
@@ -39,12 +40,33 @@ nav li {
   padding-right: 5vw;
   padding-top: 1vw;
 }
-h1, h2, h3, h4, h5, h6, header {
+h1, h2, h4, h5, h6, header, th, td, p {
   font-family: Georgia, serif;
   color: #dcdcdc;
 }
-
-
+#tracking {
+  display: none;
+}
+#tracking h4 {
+  text-align: center;
+  margin-top: 3em;
+}
+table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+#fingerprint td, #ip td {
+  padding-right: 40px;
+  padding-left: 0.5em;
+}
+#social td p, #social td img {
+  padding: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 section {
   margin-top: 35px;
   padding-bottom: 20px;
@@ -53,7 +75,7 @@ section {
 ul {
   list-style-type: none;
 }
-dt, dt a {
+dt, dt a, h3 {
   font-weight: bold;
   color: #467ba7;
   margin-top: 1.2em;

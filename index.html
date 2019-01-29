@@ -7,7 +7,7 @@
     <title>Why Privacy?</title>
     <link rel="icon" href="icons/icon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -16,6 +16,7 @@
         <h1>Why Privacy?</h1>
         <p>If you have nothing to hide, no one needs to snoop</p>
       </header>
+
       <div id="myReasons">
         <blockquote>
           My reasons for privacy are both logical and emotional.  Software
@@ -30,12 +31,42 @@
         </blockquote>
       </div>
 
+      <!-- tracking -->
+      <h3 style="text-align:center" onclick="showTable()">
+        Show Tracking Info Leaked By Your Browser
+      </h3>
+      <div id="tracking" onclick="showTable()">
+        <p style="text-align:center"><small>(Click anywhere on this section to hide)</small></p>
+
+        <h4>Browser Fingerprint</h4>
+        <table id="fingerprint" border="1">
+          <tr>
+            <th style="width:45%">Key</th>
+            <th>Value</th>
+          </tr>
+        </table>
+
+        <h4>IP Address Details</h4>
+        <table id="ip" border="1">
+          <tr>
+            <th style="width:45%">Key</th>
+            <th>Value</th>
+          </tr>
+        </table>
+
+        <h4>Sites You've Logged Into Before</h4>
+        <p style="text-align:center">The icons only load for sites you've logged into on this browser</p>
+        <table id="social" border="1">
+        </table>
+
+      </div><!-- end tracking -->
+
       <!-- main body -->
       <div>
 
         <!-- ted talks -->
-        <section id="ted">
-          <h2>TED Talks</h2>
+        <section id="videos">
+          <h2>Videos</h2>
           <ul>
             <li><a href="https://www.ted.com/talks/jennifer_granick_how_the_us_government_spies_on_people_who_protest_including_you" target="_blank">
               How The US Government Spies On People Who Protest &mdash; Including You</a></li>
@@ -47,6 +78,8 @@
               We're Building A Dystopia Just To Make People Click On Ads</a></li>
             <li><a href="https://www.ted.com/talks/alessandro_acquisti_why_privacy_matters" target="_blank">
               What Will A Future Without Secrets Look Like?</a></li>
+            <li><a href="https://www.youtube.com/watch?v=S0G6mUyIgyg&feature=share" target="_blank">
+              Google Is Tracking You Even In Airplane Mode</a></li>
           </ul>
         </section><!-- end ted talks -->
 
@@ -79,6 +112,11 @@
             <dt><a href="https://pipl.com/" target="_blank">
               Pipl</a></dt>
               <dd>Large people-search database of public info, find a person by email, username, or phone</dd>
+            <dt><a href="https://phishingquiz.withgoogle.com/" target="_blank">
+              Google Phishing Quiz</a></dt>
+              <dd>If you're not in a leak, could you get phished?<br>
+                Watch out for <a href="https://nakedsecurity.sophos.com/2017/04/19/phishing-with-punycode-when-foreign-letters-spell-english-words/" target="_blank">
+                punycode</a></dd>
           </dl>
         </section><!-- end public data on you -->
 
@@ -90,7 +128,9 @@
               Google</a></dt>
               <dd>Collects your data from all Google services including email, drive, calendar, and photos,
                 as well as Google searches and the websites you visit (especially if using Chrome),
-                and uses it for advertising<br><br>
+                and uses it for advertising,
+                <a href="https://www.privateinternetaccess.com/blog/2019/01/chromium-to-weaken-ad-blockers-impacts-chrome-edge-and-brave-browsers/" target="_blank">
+                since it's an ad company</a><br><br>
                 A bug in Google+ gave outside developers access to private profile data between 2015 and March 2018<br>
                 Google failed to report the incident among fears of reputational damage and triggering "immediate regulatory interest"</dd>
             <dt><a href="https://www.facebook.com/about/privacy#sharing-partner-information" target="_blank">
@@ -116,8 +156,9 @@
                 the services"</em></dd>
             <dt><a href="https://www.ftc.gov/news-events/blogs/business-blog/2018/02/venmo-settlement-addresses-availability-funds-privacy" target="_blank">
               Venmo</a></dt>
-              <dd>Entices users to give info about each transaction and leaves this info public by default,
-                allowing anyone to form entire transaction profiles on users</dd>
+              <dd>Users give info about each transaction which is public by default,
+                allowing anyone to form entire transaction profiles on users by <a href="https://venmo.com/api/v5/public?limit=1000000" target="_blank">
+                using their API</a></dd>
             <dt><a href="http://fortune.com/2018/04/12/uber-data-breach-security/" target="_blank">
               Uber</a></dt>
               <dd>Has suffered multiple breaches, failed to report a new breach that occured
@@ -127,7 +168,8 @@
               Microsoft</a></dt>
               <dd>Microsoft tracks data such as the type of hardware you use, which applications you have installed,
                 some usage details (e.g. how often you launch or use the applications) and crash information on your devices.<br>
-                Some of this can be turned off in settings, but it's all on by default<br>
+                Some of this can be turned off in settings, <a href="https://www.privacytools.io/#win10" target="_blank">
+                but it's all on by default</a><br>
                 Office 365 <a href="https://www.privacycompany.eu/en/impact-assessment-shows-privacy-risks-microsoft-office-proplus-enterprise/">
                 collects data about the use of its products</a>, like the sentences before and after the words you look up or retype</dd>
           </dl>
@@ -167,7 +209,10 @@
                 Premium includes proactive, real-time protection</dd>
             <dt><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
               Firefox</a></dt>
-              <dd>Browser that's not made by an ad company, so it doesn't constantly phone home about what you're doing</dd>
+              <dd>Browser that's not made by an ad company, so it doesn't track everything you do<br>
+                Still must be careful with
+                <a href="https://www.privateinternetaccess.com/blog/2017/08/use-browser-extension-full-internet-history-may-sale-easily-de-anonymized/" target="_blank">
+                extensions</a> and </dd>
             <dt><a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/" target="_blank">
               NoScript</a></dt>
               <dd>Free and open-source Firefox browser extension that blocks all scripts on websites<br>
@@ -225,10 +270,42 @@
       </footer>
     </div>
 
+    <script src="js/fingerprint.js"></script>
+    <script src="js/socialmedia.js"></script>
+    <script src="js/ip.js"></script>
+
     <script>
+
       $(document).ready(function() {
+        // Update copyright year
         $("#year").text((new Date).getFullYear());
-      });
+      }); // End Document Ready
+
+      // Add table
+      function buildTable(table, obj) {
+        var row, value;
+
+        // make 2 cols of (key, value), only populate if has value
+        for (var key in obj) {
+          if (obj[key] != '') {
+            row = table.insertRow(-1);
+            keyCell = row.insertCell(0);
+            valCell = row.insertCell(1);
+            keyCell.innerHTML = key;
+            valCell.innerHTML = obj[key];
+          }
+        }
+      }
+
+      // Show and hide tracking section on click
+      function showTable() {
+        var tr = document.getElementById('tracking');
+        if (tr.style.display === 'none' || tr.style.display == '') {
+          tr.style.display = "block";
+        } else {
+          tr.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>
