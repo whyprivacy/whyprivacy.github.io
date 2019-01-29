@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $.getJSON('http://ipinfo.io', function(data) {
+  $.getJSON('https://ipinfo.io', function(data) {
 
     var ipData = {
       ip: data.ip,

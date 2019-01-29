@@ -52,7 +52,7 @@ var platforms = [{
         name: "Foursquare"
     }, {
         domain: "https://eu.battle.net",
-        redirect: "/login/de/index?ref=http://eu.battle.net/favicon.ico",
+        redirect: "/login/de/index?ref=https://eu.battle.net/favicon.ico",
         name: "Battle.net"
     }, {
         domain: "https://store.steampowered.com",
