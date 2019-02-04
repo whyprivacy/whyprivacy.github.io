@@ -32,7 +32,6 @@ header p {
   border-bottom: 1px solid #242424;
   display: none;
 }
-
 blockquote {
   font-size: 1em;
   margin-bottom: 2em;
@@ -40,34 +39,9 @@ blockquote {
 nav li {
   display: inline-block;
 }
-
-h1, h2, h4, h5, h6, header, th, td, p {
+h1, h2, h4, h5, h6, header, p {
   font-family: Georgia, serif;
   color: #dcdcdc;
-}
-#tracking {
-  display: none;
-}
-#tracking h4 {
-  text-align: center;
-  margin-top: 3em;
-  margin-bottom: 0.2em;
-}
-#tracking p, #tracking a {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
-  text-align: center;
-  font-size: 0.9em;
-}
-table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-#fingerprint td, #ip td {
-  padding-right: 0.5em;
-  padding-left: 0.5em;
 }
 #social td {
   padding: 5px;

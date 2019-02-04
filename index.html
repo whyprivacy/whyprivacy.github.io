@@ -31,42 +31,13 @@
         </blockquote>
       </div>
 
-      <!-- tracking -->
-      <h3 style="text-align:center" onclick="showTable()">
-        Show Tracking Info Leaked By Your Browser<br>
-        <small>(without your permission!)</small>
+      <!-- fingerprint link -->
+      <h3 style="text-align:center">
+        <a href="https://dczysz.github.io/Tracking" target="_blank">
+          See Tracking Info Leaked By Your Browser<br>
+          <small>(Links to my other site)</small>
+        </a>
       </h3>
-      <div id="tracking" onclick="showTable()">
-        <p>(Click anywhere on this section to hide)</p>
-
-        <h4>Browser Fingerprint</h4>
-        <p><a href="http://webkay.robinlinus.com/" target="_blank">
-          See even more info on a better site</a></p>
-        <p>If canvas is enabled below, you're also susceptible to <a href="https://browserleaks.com/canvas#how-does-it-work" target="_blank">
-          canvas fingerprinting</a></p>
-        <table id="fingerprint" border="1">
-          <tr>
-            <th style="width:45%">Key</th>
-            <th>Value</th>
-          </tr>
-        </table>
-
-        <h4>IP Address Details</h4>
-        <table id="ip" border="1">
-          <tr>
-            <th style="width:45%">Key</th>
-            <th>Value</th>
-          </tr>
-        </table>
-
-        <h4>Sites You've Logged Into Before</h4>
-        <p style="text-align:center">The icons only load for sites you're logged into on this browser</p>
-        <p style="text-align:center"><a href="https://robinlinus.github.io/socialmedia-leak/" target="_blank">
-          See how this works</a></p>
-        <table id="social" border="1">
-        </table>
-
-      </div><!-- end tracking -->
 
       <!-- main body -->
       <div>
@@ -270,54 +241,19 @@
                 <a href="https://reports.exodus-privacy.eu.org/en/search/" target="_blank">search for a specific app</a></dd>
           </dl>
         </section><!-- end android -->
-
-
       </div><!-- end main body -->
 
       <footer>
         Copyright &copy; <span id="year">2019</span> D. Czysz
       </footer>
-    </div>
 
-    <script src="js/fingerprint.js"></script>
-    <script src="js/ip.js"></script>
-    <script src="js/socialmedia.js"></script>
-
+    </div><!-- end container -->
 
     <script>
-
       $(document).ready(function() {
         // Update copyright year
         $("#year").text((new Date).getFullYear());
       }); // End Document Ready
-
-      // Add table
-      function buildTable(table, obj) {
-        var row, value;
-
-        // make 2 cols of (key, value), only populate if has value
-        for (var key in obj) {
-          if (obj[key] != '') {
-            row = table.insertRow(-1);
-            keyCell = row.insertCell(0);
-            valCell = row.insertCell(1);
-            keyCell.innerHTML = key;
-            valCell.innerHTML = obj[key];
-          }
-        }
-      }
-
-      // Show and hide tracking section on click
-      function showTable() {
-        var tr = document.getElementById('tracking');
-        if (tr.style.display === 'none' || tr.style.display == '') {
-          tr.style.display = "block";
-        } else {
-          tr.style.display = "none";
-          window.scrollTo(0,0);
-          console.log($('#tracking').height())
-        }
-      }
     </script>
   </body>
 </html>
